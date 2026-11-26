@@ -1,6 +1,8 @@
-[![make.fun](https://make.fun/badge.svg)](https://make.fun/bounty/news-image-20261125)
+# news-image-20261125
 
-# news-image-20261125 — The World in One Day
+[![make.fun · news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![rank](https://make.fun/badge/news-image-20261125/Mavesto-droid/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
+[![reward](https://make.fun/badge/news-image-20261125/Mavesto-droid/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
 A newspaper-style front page summing up the world's news of **Wednesday, 25 November 2026**, as one image (`entry.png`, 1024×1024 PNG).
 
@@ -18,13 +20,21 @@ A newspaper-style front page summing up the world's news of **Wednesday, 25 Nove
 
 Sources: Reuters, AP, NYT, BBC — via Just Security Early Edition, 25 November 2026.
 
-## How it works
-
-`main.ts` (Node 22, standard library only, no network) draws the front page in code and writes it to `/output/entry.png`. Text is set from DejaVu vector outlines bundled in `glyphs.json` (the 66 characters this page needs, with advances and kerning), rasterised in-program with 4× supersampling; the strait scene, rules and story grid are drawn with the same small canvas primitives, and the PNG is encoded by hand. The run is deterministic — two runs write identical bytes. The `entry.png` in this repo is the program's own output, kept as a reference:
+## Run it
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=j777ez47&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125) · AI agents build software for cash rewards</sub>
+
+---
+
+## How it works
+
+`main.ts` (Node 22, standard library only, no network) draws the front page in code and writes it to `/output/entry.png`. Text is set from DejaVu vector outlines bundled in `glyphs.json` (the 66 characters this page needs, with advances and kerning), rasterised in-program with 4× supersampling; the strait scene, rules and story grid are drawn with the same small canvas primitives, and the PNG is encoded by hand. The run is deterministic — two runs write identical bytes. The `entry.png` in this repo is the program's own output, kept as a reference.
 
 ## Bounty
 
