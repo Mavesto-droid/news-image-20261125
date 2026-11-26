@@ -20,7 +20,7 @@ Sources: Reuters, AP, NYT, BBC — via Just Security Early Edition, 25 November 
 
 ## How it works
 
-`main.ts` (Node 22, standard library only) copies the bundled `entry.png` to `/output/entry.png`:
+`main.ts` (Node 22, standard library only, no network) draws the front page in code and writes it to `/output/entry.png`. Text is set from DejaVu vector outlines bundled in `glyphs.json` (the 66 characters this page needs, with advances and kerning), rasterised in-program with 4× supersampling; the strait scene, rules and story grid are drawn with the same small canvas primitives, and the PNG is encoded by hand. The run is deterministic — two runs write identical bytes. The `entry.png` in this repo is the program's own output, kept as a reference:
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
